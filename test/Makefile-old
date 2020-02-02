@@ -1,0 +1,30 @@
+all:
+	cp ../a.out sor
+	-./sor -f 0.sor -print_col_type 0  
+	-./sor -f 0.sor -print_missing_idx 0 0
+	-./sor -f 1.sor -print_col_type 0  
+	-./sor -f 1.sor -print_missing_idx 0 1
+	-./sor -f 1.sor -print_col_idx 0 3
+	-./sor -f 2.sor -print_col_type 0
+	-./sor -f 2.sor -print_col_type 1
+	-./sor -f 2.sor -print_col_type 2
+	-./sor -f 2.sor -print_col_type 3
+	-./sor -f 2.sor -print_missing_idx 1 0
+	-./sor -f 2.sor -print_missing_idx 1 1
+	-./sor -f 2.sor -print_col_idx 3 0
+	-./sor -f 2.sor -print_col_idx 3 1
+	-./sor -f 2.sor -print_col_idx 2 0
+	-./sor -f 2.sor -print_col_idx 2 1
+	-./sor -f 3.sor -print_col_type 4
+	-./sor -f 3.sor -print_col_idx 2 10
+	-./sor -f 3.sor -print_col_idx 2 384200
+	-./sor -f 4.sor -print_col_idx 0 1
+	-./sor -f 4.sor -print_col_idx 0 2
+	-./sor -f 4.sor -print_col_idx 1 1
+	-./sor -f 4.sor -print_col_idx 1 2
+	-./sor -f 1.sor -from 1 -len 74 -print_col_type 0
+	-./sor -f 1.sor -from 1 -len 74 -print_missing_idx 0 0
+	-./sor -f 1.sor -from 1 -len 74 -print_col_idx 0 6
+
+clean:
+	- rm a.out *~
