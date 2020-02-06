@@ -1,6 +1,3 @@
-# Default Optimization
-O ?= 3
-
 # Include rules
 # -include ../build/rules.mk
 CXXFLAGS := --std=c++11 -Wall --pedantic -O3
@@ -17,7 +14,7 @@ unittest:
 	$(DOCKER) "cd /test ; g++ $(CXXFLAGS) test.cpp -o unittest"
 
 val:
-	$(DOCKER) "cd /test ; valgrind --leak-check=yes ./sorer -f test/2.sor -print_col_idx 1 1"
+	$(DOCKER) "cd /test ; valgrind --leak-check=yes ./sorer -f test/3.sor -print_col_idx 1 1"
 
 test: build unittest
 	@ - $(DOCKER) "cd /test ; ./sorer -f "data.sor" -from 0 -len 100 -print_col_type 0"

@@ -9,6 +9,4 @@
  *
  * Author: cao.yuan1@husky.neu.edu & zhan.d@husky.neu.edu
  */
-
-
-enum class Types{ FIELD=0, EMPTY=1, BOOL=2, INT=3, FLOAT=4, STRING=5 };
+enum class Types{ FIELD=0, BOOL=1, INT=2, FLOAT=3, STRING=4 };
